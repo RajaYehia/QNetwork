@@ -12,9 +12,10 @@ from org.orekit.orbits import PositionAngleType
 
 start = pd.Timestamp(datetime.now())
 end = pd.Timestamp(datetime.now()+timedelta(hours= 200))
-t = np.linspace(start.value, end.value, 100000)
+t = np.linspace(start.value, end.value, 100)
 datetime_list = pd.to_datetime(t)
 gcrf = FramesFactory.getGCRF()
+
 
 a = 6872181.5020032395
 e = 0.0013200
@@ -45,7 +46,7 @@ micius = ns.Satellite(tle, simType="tle")
 #delft = ns.GroundStation(*delftparams)
 paris = ns.GroundStation(*parisparams)
 
-TESTCHANNEL_paris = ns.SimpleDownlinkChannel(micius, paris, wl)
+TESTCHANNEL_paris = ns.SimpleDownlinkChannel(micius, paris)
 #TESTCHANNEL_delft = ns.SimpleDownlinkChannel(micius, delft, wl)
 
 results_paris = TESTCHANNEL_paris.calculateChannelParameters(datetime_list)
@@ -55,7 +56,7 @@ results_paris = TESTCHANNEL_paris.calculateChannelParameters(datetime_list)
 #             - elevation [degrees]
 
 plt.figure(figsize=(21,9))
-plt.plot(results_paris[2], results_paris[1])
+plt.plot(results_paris[2], results_paris[0])
 #plt.plot(datetime_list, results_delft[1])
 plt.xticks(rotation=45)
 plt.show()
