@@ -1,8 +1,7 @@
-# SatOptLink
-This repository contains some tools for the calculation of satellite trajectory, atmospheric attenuation and channel transmittance.
+# QNetwork
+This repository contains some tools for the calculation of satellite trajectory, atmospheric attenuation and channel transmittance (from SatOptLink repository).
 It is currenly developped in [LIP6](www.lip6.fr)’s [QI team](https://qi.lip6.fr) for applications in space quantum networks.
-
-It’s current state is full of hacks and hard-coded values, but we intend to have a set of useable tools soon.
+We also used various tools developed in the QuantumCity(https://github.com/RajaYehia/QuantumCity/blob/main) and the balloon_qnet(https://github.com/RajaYehia/balloon_qnet/blob/packaging/) repositories.
 
 ## Dependencies
 
@@ -20,6 +19,7 @@ In addition to these, another crucial component is lowtran(-piccia). Installing 
 - Clone the lowtran(-piccia) repository from GitHub using the command git clone https://github.com/francescopiccia/lowtran-piccia.git.
 - Install lowtran(-piccia) by navigating into the cloned directory and running "pip3 install ."
 
+For the installation of NetSquid you need to create an account via their website https://netsquid.org/
 
 ## Development
 
@@ -40,3 +40,6 @@ SatOptLink is developped by:
 * Aeden Leal
 * Hanafi Issahnane
 * Frédéric Grosshans
+* Raja Yehia
+* Giorgos Papagrigoriou
+* Ilektra Karakosta-Amarantidou
